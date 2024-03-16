@@ -97,6 +97,7 @@ Consultas de recursos Ghibliapi:
 /api/species
 /api/vehicles
 
+
 **Notas**
 
 Cada solicitud para consumir un endpoint requiere que se pase el token generado previamente en los Headers de la solicitud, por ejemplo:
