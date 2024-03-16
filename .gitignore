@@ -8,3 +8,6 @@ db.sqlite3
 
 # Virtual Environment
 venv/
+
+#Variables de entorno
+.env
