@@ -6,13 +6,14 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+#Definición de funcion para la documentación swagger y redoc
 schema_view = get_schema_view(
     openapi.Info(
-        title="API Documentation",
+        title="API Challenge Banpay",
         default_version='v1',
-        description="API documentation using Swagger",
+        description="Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles consumir endpoint de Studio Ghibli",
         terms_of_service="https://www.example.com/policies/terms/",
-        contact=openapi.Contact(email="contact@example.com"),
+        contact=openapi.Contact(email="1steven.nathan.sanchez@gmail.com"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
