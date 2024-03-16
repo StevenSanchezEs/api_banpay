@@ -11,7 +11,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="API Challenge Banpay",
         default_version='v1',
-        description="Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles consumir endpoint de Studio Ghibli",
+        description="Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles consumir endpoint de Studio Ghibli desde esta misma API.",
         terms_of_service="https://www.example.com/policies/terms/",
         contact=openapi.Contact(email="1steven.nathan.sanchez@gmail.com"),
         license=openapi.License(name="BSD License"),
