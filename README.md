@@ -42,14 +42,15 @@ Debes tener una base de datos creada o crear una, para este ejemplo se creo una 
 Los datos presentados a continuación son unicamente para representar un ejemplo, tienes que remplazar los valores por tus propias credenciales, el **SECRET KEY** es muy importante que lo cambies por uno generado por herramientas como **secrets** de Python, DEBUG debes cambiarlo a **False** y en **ALLOWED_HOST** por el dominio o ip donde se permitiran las solicitudes.
 
 Ejemplo Variables de entorno:
-    #Variables para Configuración Base de Datos
+	
+ 	#Variables para Configuración Base de Datos
 	DB_NAME=banpay
 	DB_USER=pruebas
 	DB_PASSWORD=MbI6avYvzR2rYKihN5IokQQ-KCYQ
 	DB_HOST=monorail.proxy.rlwy.net
 	DB_PORT=24621
 	
-	#Variables para configuracion de producción
+ 	#Variables para configuracion de producción
 	SECRET_KEY=django-insecure-34hdbp&tde8_+zd2k)q$+u
 	ALLOWED_HOSTS='*'
 	DEBUG=True
