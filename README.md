@@ -43,7 +43,7 @@ Los datos presentados a continuación son unicamente para representar un ejemplo
 
 Ejemplo Variables de entorno:
 
-     	#Variables para Configuración Base de Datos
+     #Variables para Configuración Base de Datos
 	DB_NAME=banpay
 	DB_USER=pruebas
 	DB_PASSWORD=MbI6avYvzR2rYKihN5IokQQ-KCYQ
