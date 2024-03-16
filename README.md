@@ -96,3 +96,10 @@ Consultas de recursos Ghibliapi:
 /api/locations
 /api/species
 /api/vehicles
+
+**Enspoints de la API**
+
+Cada solicitud para consumir un endpoint requiere que se pase el token generado previamente en los Headers de la solicitud, por ejemplo:
+
+Key: Authorization
+Value: Bearer tutoken3242onoin23o4n32i3on34223oi
