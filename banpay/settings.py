@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'banpay.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('DB_NAME', 'banpaydb'),
         'USER': os.environ.get('DB_USER', 'banpay'),
         'PASSWORD': os.environ.get('DB_PASSWORD', 'BanPa&2024Default'),
         'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '3306'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }
 
