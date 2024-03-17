@@ -50,7 +50,7 @@ Puedes usar una instancia de Postgres tradicional o un contenedor como se muestr
 
 Los datos presentados a continuación son unicamente para representar un ejemplo, tienes que remplazar los valores por tus propias credenciales, el **SECRET KEY** es muy importante que lo cambies por uno generado por herramientas como **secrets** de Python, DEBUG debes cambiarlo a **False** y en **ALLOWED_HOST** por el dominio o ip donde se permitiran las solicitudes.
 
-Ejemplo Variables de entorno:
+Ejemplo para definir Variables de entorno en el archivo .env creado previamente:
 	
  	#Variables para Configuración Base de Datos
 	DB_NAME=banpay
