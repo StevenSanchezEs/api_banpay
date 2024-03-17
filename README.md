@@ -4,8 +4,8 @@ Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles c
 
 ## Requisitos
 
-- Python 3.11.2
-- MariaDB o MySQL
+- Python 3.8
+- Postgresql
 - SO Linux
 
 ## Configuración del entorno virtual
@@ -20,7 +20,7 @@ Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles c
 
 3.**Crear y Activar el Entorno Virtual:**
 
-> python3.11 -m venv venv
+> python3.8 -m venv venv
 
 > source venv/bin/activate
 
@@ -35,22 +35,31 @@ Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles c
 
 6.**Base de datos**
 
-Debes tener una base de datos creada o crear una, para este ejemplo se creo una base de datos llamada **banpay**, tu puedes elegir el de tu preferencia ya que en el archivo **.env** podras cambiar la configuración de tu base de datos si así lo requieres.
+Debes tener una base de datos Postgres creada o crear una, para este ejemplo se creo una base de datos llamada **banpay**, tu puedes elegir el de tu preferencia ya que en el archivo **.env** podras cambiar la configuración de tu base de datos si así lo requieres.
+
+Puedes usar una instancia de Postgres tradicional o un contenedor como se muestra a continuación.
+> docker run --name mi-postgres \
+           -e POSTGRES_DB=nombre_base_de_datos \
+           -e POSTGRES_USER=nombre_usuario \
+           -e POSTGRES_PASSWORD=contraseña \
+           -p puerto_local:5432 \
+           -d postgres
+
 
 7.**Configurar variables de entorno para producción**
 
 Los datos presentados a continuación son unicamente para representar un ejemplo, tienes que remplazar los valores por tus propias credenciales, el **SECRET KEY** es muy importante que lo cambies por uno generado por herramientas como **secrets** de Python, DEBUG debes cambiarlo a **False** y en **ALLOWED_HOST** por el dominio o ip donde se permitiran las solicitudes.
 
-Ejemplo Variables de entorno:
-
-	#Variables para Configuración Base de Datos
+Ejemplo para definir Variables de entorno en el archivo .env creado previamente:
+	
+ 	#Variables para Configuración Base de Datos
 	DB_NAME=banpay
 	DB_USER=pruebas
 	DB_PASSWORD=MbI6avYvzR2rYKihN5IokQQ-KCYQ
 	DB_HOST=monorail.proxy.rlwy.net
 	DB_PORT=24621
 	
-	#Variables para configuracion de producción
+ 	#Variables para configuracion de producción
 	SECRET_KEY=django-insecure-34hdbp&tde8_+zd2k)q$+u
 	ALLOWED_HOSTS='*'
 	DEBUG=True
