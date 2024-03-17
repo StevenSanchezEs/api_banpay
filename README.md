@@ -4,8 +4,8 @@ Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles c
 
 ## Requisitos
 
-- Python 3.11.2
-- MariaDB o MySQL
+- Python 3.8
+- Postgresql
 - SO Linux
 
 ## Configuración del entorno virtual
@@ -20,7 +20,7 @@ Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles c
 
 3.**Crear y Activar el Entorno Virtual:**
 
-> python3.11 -m venv venv
+> python3.8 -m venv venv
 
 > source venv/bin/activate
 
@@ -35,7 +35,16 @@ Esta API te permite realizar operaciones CRUD en /usuarios/, y en base a roles c
 
 6.**Base de datos**
 
-Debes tener una base de datos creada o crear una, para este ejemplo se creo una base de datos llamada **banpay**, tu puedes elegir el de tu preferencia ya que en el archivo **.env** podras cambiar la configuración de tu base de datos si así lo requieres.
+Debes tener una base de datos Postgres creada o crear una, para este ejemplo se creo una base de datos llamada **banpay**, tu puedes elegir el de tu preferencia ya que en el archivo **.env** podras cambiar la configuración de tu base de datos si así lo requieres.
+
+Puedes usar una instancia de Postgres tradicional o un contenedor como se muestra a continuación.
+> docker run --name mi-postgres \
+           -e POSTGRES_DB=nombre_base_de_datos \
+           -e POSTGRES_USER=nombre_usuario \
+           -e POSTGRES_PASSWORD=contraseña \
+           -p puerto_local:5432 \
+           -d postgres
+
 
 7.**Configurar variables de entorno para producción**
 
